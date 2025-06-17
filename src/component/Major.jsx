@@ -50,11 +50,11 @@ const balance = income - totalAmount;
   onChange={(e) => setIncome(Number(e.target.value))}></input>
     </div>
     <div className='box'>
-        <h2 className='head'>Transactions</h2>
+        <h2 className='head'>Expenses</h2>
         <form>
         <input className="narration py" type='text' placeholder='Description' onChange={(e) => setDescription(e.target.value)} value={description}></input>
         <input className="amt px" type='number' placeholder='Amount' onChange={(e) => setAmount(Number(e.target.value))} value={amount}></input>
-        <button className="addition py" onClick={addTransaction}>Add Transaction</button>
+        <button className="addition py" onClick={addTransaction}>Add Expense</button>
         </form>
     </div>
     <table className="log">

@@ -3,7 +3,6 @@ import Header from "./component/Header";
 import Major from "./component/Major";
 import "./index.css"
 
-
 function App() {
   return (
     <>
