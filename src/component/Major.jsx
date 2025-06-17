@@ -100,6 +100,12 @@ const balance = income - totalAmount;
         </p>
         )}
     </div>
+
+    <div className="G-reset">
+        <div>
+        <button className="reset">Reset</button>
+        </div>
+    </div>
     </div>
   )
 }

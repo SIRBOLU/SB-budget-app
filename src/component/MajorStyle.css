@@ -105,6 +105,22 @@ td{
 .icon-delete{
     color: red;
 }
+.G-reset{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reset{
+    /* margin: 1rem auto; */
+    text-align: center;
+    color: #fff;
+    background-color: red;
+    padding: 14px;
+    border-radius: 50%;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
 @media screen and (max-width: 750px){
     .overall{
         width: 100%;
