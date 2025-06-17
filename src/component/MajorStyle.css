@@ -52,6 +52,7 @@ td{
     font-size: 1.7rem;
     width: 10rem;
     text-align: center;
+    font-weight: bolder;
 }
 .final{
     display: flex;
@@ -130,6 +131,21 @@ td{
     }
     .summary p{
     font-size: 1.5rem;
-    /* margin-bottom: 2rem; */
-}
+    margin-bottom: 1rem;
+    }
+    .income input{
+    font-size: 1.2rem;
+    width: 7rem;
+    font-weight: bolder;
+    text-align: center;
+    }
+    .income h2{
+        font-size: 1.3rem;
+    }
+    .box h2{
+        font-size: 1.2rem;
+    }
+    form .narration{
+        width: 6rem;
+    }
 }
