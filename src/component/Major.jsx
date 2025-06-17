@@ -43,6 +43,14 @@ const totalAmount = transaction.reduce((sum, t) => sum + Number(t.amount), 0)
 
 const balance = income - totalAmount;
 
+const resetForm = () => {
+  setDescription("");
+  setAmount(0);
+  setEditId(null);
+  setTransaction([]);
+  setIncome(0)
+};
+
   return (<div className="overall">
     <div className="income">
         <h2>Kindly input your income for the month</h2>
@@ -103,7 +111,7 @@ const balance = income - totalAmount;
 
     <div className="G-reset">
         <div>
-        <button className="reset">Reset</button>
+        <button className="reset" onClick={resetForm} >Reset</button>
         </div>
     </div>
     </div>
