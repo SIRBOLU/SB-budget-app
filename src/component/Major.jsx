@@ -54,14 +54,32 @@ const resetForm = () => {
   return (<div className="overall">
     <div className="income">
         <h2>Kindly input your income for the month</h2>
-        <input type="number" value={income}
-  onChange={(e) => setIncome(Number(e.target.value))}></input>
+        <input
+  type="number"
+  value={income}
+  onChange={(e) => {
+    const input = e.target.value;
+    if (input.length <= 10) { // restrict to 5 digits
+      setIncome(Number(input));
+    }
+  }}
+/>
+        {/* <input type="number" value={income}
+  onChange={(e) => setIncome(Number(e.target.value))}></input> */}
     </div>
     <div className='box'>
         <h2 className='head'>Expenses</h2>
         <form>
-        <input className="narration py" type='text' placeholder='Description' onChange={(e) => setDescription(e.target.value)} value={description}></input>
-        <input className="amt px" type='number' placeholder='Amount' onChange={(e) => setAmount(Number(e.target.value))} value={amount}></input>
+        <input className="narration py" type='text' maxLength={12} placeholder='Description' onChange={(e) => setDescription(e.target.value)} value={description}></input>
+        {/* <input className="amt px" type='number' placeholder='Amount' onChange={(e) => setAmount(Number(e.target.value))} value={amount}></input> */}
+        <input
+        type="number" className="amt px" value={amount} onChange={(e) => {
+        const input = e.target.value;
+    if (input.length <= 10) { // restrict to 5 digits
+      setAmount(Number(input));
+    }
+  }}
+/>
         <button className="addition py" onClick={addTransaction}>Add Expense</button>
         </form>
     </div>
