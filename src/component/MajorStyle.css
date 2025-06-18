@@ -59,6 +59,8 @@ td{
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
+    gap: 2px
+    ;
 } 
 .total input{
     font-size: large;
@@ -169,4 +171,23 @@ td{
     form .narration{
         width: 6rem;
     }
+    .py, .px{
+    width: 6rem;
+    padding: 6px;
+    margin: 0.5rem;
+}
+th{
+    padding: 10px 1rem;
+    margin-bottom: 2rem;
+    background-color: rgb(10, 220, 235);
+    font-size: 1rem;
+}
+.total input, .bal input{
+    width: 7rem;
+    padding: 2px;
+    margin-left: 5px;
+}
+.total label, .bal label{
+    font-size: 14px;
+}
 }
