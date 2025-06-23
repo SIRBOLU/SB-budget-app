@@ -27,6 +27,10 @@ const addTransaction = (e) => {
 }
     setDescription("")
     setAmount(0)
+    if (description.trim() === '' || amount === '' || Number(amount) <= 0) {
+    alert('Please enter both a valid description and a positive amount.');
+    return; // Exit early
+  }
 }
 
 const handleEdit = (t) => {
