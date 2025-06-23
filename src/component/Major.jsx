@@ -55,13 +55,22 @@ const resetForm = () => {
     <div className="income">
         <h2>Kindly input your income for the month</h2>
         <input
-  type="number"
-  value={income}
-  onChange={(e) => {
-    const input = e.target.value;
-    if (input.length <= 10) { // restrict to 5 digits
-      setIncome(Number(input));
-    }
+        type="number"
+        value={income}
+        onChange={(e) => {
+        let input = e.target.value;
+        if (input.length <= 10) { // restrict to 5 digits
+        setIncome(Number(input));
+        }
+        if (input.length > 1 && input.startsWith('0')) {
+        input = input.replace(/^0+/, '');
+        }
+        if (input.length <= 10) { // restrict to 5 digits
+        setIncome(Number(input));
+        }
+        if (/^\d*$/.test(input)) {
+        setIncome(input);
+        }
   }}
 />
         {/* <input type="number" value={income}
@@ -74,10 +83,16 @@ const resetForm = () => {
         {/* <input className="amt px" type='number' placeholder='Amount' onChange={(e) => setAmount(Number(e.target.value))} value={amount}></input> */}
         <input
         type="number" className="amt px" value={amount} onChange={(e) => {
-        const input = e.target.value;
-    if (input.length <= 10) { // restrict to 5 digits
-      setAmount(Number(input));
-    }
+        let input = e.target.value;
+        if (input.length > 1 && input.startsWith('0')) {
+        input = input.replace(/^0+/, '');
+        }
+        if (input.length <= 10) { // restrict to 5 digits
+        setAmount(Number(input));
+        }
+        if (/^\d*$/.test(input)) {
+        setAmount(input);
+        }
   }}
 />
         <button className="addition py" onClick={addTransaction}>Add Expense</button>
